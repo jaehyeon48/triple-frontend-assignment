@@ -1,0 +1,37 @@
+{
+  "name": "triple-assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve --env development",
+    "lint:es": "eslint \"**/*.{js,ts,tsx}\"",
+    "lint:es:fix": "npm run lint:es -- --fix",
+    "lint:etc": "prettier \"**/*.{json,yaml,md}\" --check",
+    "lint:etc:fix": "prettier \"**/*.{json,yaml,md}\" --write"
+  },
+  "keywords": [],
+  "author": "jaehyeon kim",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.18.5",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.17.12",
+    "@babel/preset-typescript": "^7.17.12",
+    "@titicaca/eslint-config-triple": "^3.1.0",
+    "@types/react": "^18.0.14",
+    "@types/react-dom": "^18.0.5",
+    "babel-loader": "^8.2.5",
+    "eslint": "^7.32.0",
+    "html-webpack-plugin": "^5.5.0",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.2"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
