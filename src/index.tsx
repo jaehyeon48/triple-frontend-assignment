@@ -37,9 +37,9 @@ root.render(
       </SectionLogoContainer>
       <SectionContentContainer>
         <MetricCounterContainer>
-          <MetricCounter />
-          <MetricCounter />
-          <MetricCounter />
+          <MetricCounter unit="만 명" description="의 사용자" />
+          <MetricCounter unit="만 개" description="의 리뷰" />
+          <MetricCounter unit="만 개" description="의 저장" />
         </MetricCounterContainer>
         <AwardsContainer>
           <TextWithBackgroundImage
