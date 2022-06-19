@@ -39,6 +39,14 @@ p, h1, h2, h3, h4, h5, h6 {
 
 #root {
   isolation: isolate;
+  
+  /* 결과물을 화면 중앙에 배치해 좀 더 잘 보이도록 
+   * 적용한 스타일입니다
+   */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 `
 
