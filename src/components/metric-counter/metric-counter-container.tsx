@@ -1,9 +1,12 @@
 import styled from 'styled-components'
 
-import { fadeIn } from '@styles/animations'
+import { fadeIn, moveUp } from '@styles/animations'
 
 const MetricCounterContainer = styled.div`
-  animation: ${fadeIn} 700ms ease-in-out 100ms;
+  animation: ${fadeIn}, ${moveUp};
+  animation-duration: 700ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 100ms;
 `
 
 export default MetricCounterContainer

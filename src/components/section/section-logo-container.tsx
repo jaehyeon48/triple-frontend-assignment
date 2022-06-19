@@ -1,9 +1,11 @@
 import styled from 'styled-components'
 
-import { fadeIn } from '@styles/animations'
+import { fadeIn, moveUp } from '@styles/animations'
 
 const SectionLogoContainer = styled.div`
-  animation: ${fadeIn} 700ms ease-in-out;
+  animation: ${fadeIn}, ${moveUp};
+  animation-duration: 700ms;
+  animation-timing-function: ease-in-out;
 `
 
 export default SectionLogoContainer
