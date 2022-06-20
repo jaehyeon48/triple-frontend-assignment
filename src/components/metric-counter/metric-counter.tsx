@@ -10,6 +10,7 @@ interface MetricCounterProps {
   end: number
   durationInMilliSec?: number
   easeOutOption?: EaseOutOptions
+  precision?: number
 }
 
 const Wrapper = styled.p`
@@ -26,12 +27,14 @@ function MetricCounter({
   end,
   durationInMilliSec,
   easeOutOption,
+  precision,
 }: MetricCounterProps) {
   const counter = useCountUp({
     start,
     end,
     durationInMilliSec,
     easeOutOption,
+    precision,
   })
 
   return (

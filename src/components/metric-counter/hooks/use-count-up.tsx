@@ -8,6 +8,7 @@ interface CountUpProps {
   end: number
   durationInMilliSec?: number
   easeOutOption?: EaseOutOptions
+  precision?: number
 }
 
 function useCountUp({
@@ -15,8 +16,9 @@ function useCountUp({
   end,
   durationInMilliSec = 2000,
   easeOutOption = 'exponential',
+  precision = 0,
 }: CountUpProps) {
-  const [count, setCount] = useState(start)
+  const [count, setCount] = useState<string | number>(start)
 
   useEffect(() => {
     const startTime = performance.now()
@@ -31,7 +33,11 @@ function useCountUp({
         durationInMilliSec,
       })
 
-      setCount(Math.floor(currentCount))
+      if (precision === 0) {
+        setCount(Math.floor(currentCount))
+      } else {
+        setCount(currentCount.toFixed(precision))
+      }
       if (currentTime >= endTime) {
         return
       }
@@ -40,7 +46,7 @@ function useCountUp({
     }
 
     countUp(startTime)
-  }, [start, end, durationInMilliSec, easeOutOption])
+  }, [start, end, durationInMilliSec, easeOutOption, precision])
 
   return count
 }
