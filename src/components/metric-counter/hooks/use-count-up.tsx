@@ -4,19 +4,19 @@ import { easeOut, roundWithPrecision } from '../utils'
 import { EaseOutOptions } from '../types'
 
 interface CountUpProps {
-  startCount?: number
-  endCount: number
+  start?: number
+  end: number
   durationInMilliSec?: number
   easeOutOption?: EaseOutOptions
 }
 
 function useCountUp({
-  startCount = 0,
-  endCount,
+  start = 0,
+  end,
   durationInMilliSec = 2000,
   easeOutOption = 'quint',
 }: CountUpProps) {
-  const [count, setCount] = useState(startCount)
+  const [count, setCount] = useState(start)
 
   useEffect(() => {
     const startTime = performance.now()
@@ -25,8 +25,8 @@ function useCountUp({
     async function countUp(currentTime: number) {
       const elapsedTime = currentTime - startTime
       const currentCount = easeOut[easeOutOption]({
-        start: startCount,
-        end: endCount,
+        start,
+        end,
         elapsed: elapsedTime,
         durationInMilliSec,
       })
@@ -40,7 +40,7 @@ function useCountUp({
     }
 
     countUp(startTime)
-  }, [startCount, endCount, durationInMilliSec, easeOutOption])
+  }, [start, end, durationInMilliSec, easeOutOption])
 
   return count
 }

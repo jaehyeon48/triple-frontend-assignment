@@ -6,8 +6,8 @@ import { EaseOutOptions } from './types'
 interface MetricCounterProps {
   unit: string
   description: string
-  startCount?: number
-  endCount: number
+  start?: number
+  end: number
   durationInMilliSec?: number
   easeOutOption?: EaseOutOptions
 }
@@ -22,14 +22,14 @@ const Wrapper = styled.p`
 function MetricCounter({
   unit,
   description,
-  startCount,
-  endCount,
+  start,
+  end,
   durationInMilliSec,
   easeOutOption,
 }: MetricCounterProps) {
   const counter = useCountUp({
-    startCount,
-    endCount,
+    start,
+    end,
     durationInMilliSec,
     easeOutOption,
   })
