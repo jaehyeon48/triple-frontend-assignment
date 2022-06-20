@@ -9,6 +9,23 @@ npm start
 
 ## 사용 기술 스택
 
+### Babel과 Webpack
+
+- 바벨의 경우 리액트에서 사용하는 JSX를 변환하기 위해 사용하였습니다.
+- 웹팩의 경우 일반적으론 여러 파일의 의존성을 분석해서 여러 최적화 작업을 수행하고 파일을 번들링 하기 위해 사용되지만, 이 프로젝트에선 주로 웹팩 dev server에서 제공하는 HMR 기능을 사용하여 개발하기 위해 사용했습니다.
+
+### ESLint와 Prettier
+
+- 코드의 스타일을 일관되게 유지하고, 에러나 안티 패턴을 찾기 위해 사용하였습니다. [eslint-config-triple](https://github.com/titicacadev/eslint-config-triple)을 참고하여 설정하였습니다.
+
+### styled-components
+
+styled-components를 사용한 이유는 아래와 같습니다:
+
+- 스타일을 적용할 때 styled-components를 통해 스타일이 결합된 컴포넌트를 생성함으로써 className 중복문제를 해결할 수 있어 좋다고 생각합니다.
+- 스타일을 변경할 때도 className을 기반으로 하는 경우 스타일을 변경했을 때 다른 컴포넌트에도 영향을 미치는지 파악해야 하지만, styled-components를 사용하는 경우 이러한 문제가 없어 편하다고 생각합니다.
+- prop을 넘겨받아 런타임에 변경되는 상태에 따른 스타일을 동적으로 변경하기 수월하다고 생각합니다.
+
 ## 동작 화면
 
 ![동작 화면](readme-images/working-example.gif)
