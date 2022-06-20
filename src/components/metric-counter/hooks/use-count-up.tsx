@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import { easeOut, roundWithPrecision } from '../utils'
+import { easeOut } from '../utils'
 import { EaseOutOptions } from '../types'
 
 interface CountUpProps {
@@ -31,7 +31,7 @@ function useCountUp({
         durationInMilliSec,
       })
 
-      setCount(Math.floor(roundWithPrecision(currentCount, 1)))
+      setCount(Math.floor(currentCount))
       if (currentTime >= endTime) {
         return
       }
