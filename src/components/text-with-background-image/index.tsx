@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Property } from 'csstype'
 
 const TextWithBackgroundImage = styled.p<{
-  imageUrl: string
+  src: string
   width?: Property.Width
   height?: Property.Height
   padding?: Property.Padding
@@ -13,7 +13,7 @@ const TextWithBackgroundImage = styled.p<{
   fontWeight?: Property.FontWeight
   lineHeight?: Property.LineHeight
 }>((props) => ({
-  backgroundImage: `url(${props.imageUrl})`,
+  backgroundImage: `url(${props.src})`,
   backgroundRepeat: 'no-repeat',
   backgroundSize: props.backgroundSize,
   width: props.width,

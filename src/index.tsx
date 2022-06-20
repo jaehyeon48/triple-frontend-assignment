@@ -23,7 +23,7 @@ root.render(
     <SectionContainer>
       <SectionLogoContainer>
         <TextWithBackgroundImage
-          imageUrl={tripleLogoImageUrl}
+          src={tripleLogoImageUrl}
           backgroundSize="400px 338px"
           width="400px"
           height="338px"
@@ -48,7 +48,7 @@ root.render(
         </MetricCounterContainer>
         <AwardsContainer>
           <TextWithBackgroundImage
-            imageUrl={playStoreImageUrl}
+            src={playStoreImageUrl}
             backgroundSize="54px 54px"
             height="54px"
             padding="5px 0px 5px 62px"
@@ -62,7 +62,7 @@ root.render(
             올해의 앱 최우수상 수상
           </TextWithBackgroundImage>
           <TextWithBackgroundImage
-            imageUrl={appleBadgeImageUrl}
+            src={appleBadgeImageUrl}
             backgroundSize="54px 54px"
             height="54px"
             padding="5px 0px 5px 62px"
