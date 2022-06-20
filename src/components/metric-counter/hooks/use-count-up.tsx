@@ -23,11 +23,11 @@ function useCountUp({
     const endTime = startTime + durationInMilliSec
 
     async function countUp(currentTime: number) {
-      const elapsedTime = currentTime - startTime
+      const elapsed = currentTime - startTime
       const currentCount = easeOut[easeOutOption]({
         start,
         end,
-        elapsed: elapsedTime,
+        elapsed,
         durationInMilliSec,
       })
 
