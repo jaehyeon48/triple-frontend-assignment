@@ -10,9 +10,12 @@ const easeOut = {
     const progress = elapsed / durationInMilliSec - 1
     return (end - start) * progress ** 3 + end
   },
-  quint({ start, end, elapsed, durationInMilliSec }: EaseOutArgs) {
+  exponential({ start, end, elapsed, durationInMilliSec }: EaseOutArgs) {
     const progress = elapsed / durationInMilliSec
-    return start + (end - start) * (1 - (1 - progress) ** 5)
+    if (progress >= 1) {
+      return end
+    }
+    return (end - start) * (1 - 2 ** (-10 * progress)) + start
   },
 }
 

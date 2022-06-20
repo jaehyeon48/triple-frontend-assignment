@@ -14,7 +14,7 @@ function useCountUp({
   start = 0,
   end,
   durationInMilliSec = 2000,
-  easeOutOption = 'quint',
+  easeOutOption = 'exponential',
 }: CountUpProps) {
   const [count, setCount] = useState(start)
 

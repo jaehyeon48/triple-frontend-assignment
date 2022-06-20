@@ -1,1 +1,1 @@
-export type EaseOutOptions = 'cubic' | 'quint'
+export type EaseOutOptions = 'cubic' | 'exponential'
