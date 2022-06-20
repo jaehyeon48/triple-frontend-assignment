@@ -32,8 +32,8 @@ npm start
 
 - `TextWithBackgroundImage`: 각종 이미지와 텍스트가 같이 존재하는 UI의 경우, 이미지 크기와 텍스트 위치를 외부에서 prop으로 넘겨받도록 설계하면 이미지 크기 혹은 텍스트 위치별 컴포넌트를 각각 만들지 않고 재사용할 수 있을 것 같아 이렇게 설계하였습니다.
   - 이때 트리플의 로고, 구글 플레이 로고, 애플 로고를 띄울 때 HTML의 `<img />` 태그와 CSS의 `background-image: url(...)` 중 어떤 것을 사용할 것인가에 대해 고민했었는데, 아래 글들을 참고하여 CSS를 통해 이미지를 띄우기로 했습니다:
-	- [\<img\> vs background-image :: 마이구미 :: 마이구미의 HelloWorld](https://mygumi.tistory.com/369)
-  - [html - When to use IMG vs. CSS background-image? - Stack Overflow](https://stackoverflow.com/questions/492809/when-to-use-img-vs-css-background-image)
+	  - [\<img\> vs background-image :: 마이구미 :: 마이구미의 HelloWorld](https://mygumi.tistory.com/369)
+    - [html - When to use IMG vs. CSS background-image? - Stack Overflow](https://stackoverflow.com/questions/492809/when-to-use-img-vs-css-background-image)
   - 즉, **사용자가 컨텐츠를 이해하는 데 해당 이미지가 도움을 주는가?** 혹은 **이미지가 핵심 컨텐츠인가?** 를 고려해봤을 때, 핵심 컨텐츠는 `2019년 2월 기준`, `2018 구글 플레이스토어 올해의 앱 최우수상 수상`과 같은 텍스트라고 생각했고, 로고 이미지들은 없어도 사용자가 컨텐츠를 이해하는데 크게 지장을 주지 않는 요소라고 판단하였습니다. 따라서 이미지를 표시할 때 HTML의 `<img />` 태그 대신 CSS의 `background-image` 속성을 사용하였습니다.
 - `MetricCounter`: 숫자 데이터를 나타내는 컴포넌트로, 숫자가 올라가는 기능과 증가 속도가 느려지는 기능은 `useCountUp`이라는 커스텀 훅에 위임하고, 사용자로부터 시작 값, 종료 값, 애니메이션 지속 시간, 애니메이션 함수를 넘겨받도록 인터페이스를 구성하였습니다.
 - 이외에 섹션과 관련된 컨테이너 및 수상 내역을 나타내는 컨테이너는 레이아웃을 구성하기 위해 사용하였습니다.
