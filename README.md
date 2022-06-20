@@ -9,6 +9,10 @@ npm start
 
 ## 사용 기술 스택
 
+## 동작 화면
+
+![동작 화면](readme-images/working-example.gif)
+
 ## 고민과 해결
 
 ### 디렉토리 설계
