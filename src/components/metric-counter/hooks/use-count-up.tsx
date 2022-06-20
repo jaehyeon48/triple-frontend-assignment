@@ -1,15 +1,7 @@
 import { useEffect, useState } from 'react'
 
 import { easeOut } from '../utils'
-import { EaseOutOptions } from '../types'
-
-interface CountUpProps {
-  start?: number
-  end: number
-  durationInMilliSec?: number
-  easeOutOption?: EaseOutOptions
-  precision?: number
-}
+import { CountUpProps } from '../types'
 
 function useCountUp({
   start = 0,

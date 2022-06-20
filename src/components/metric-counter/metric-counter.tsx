@@ -1,16 +1,11 @@
 import styled from 'styled-components'
 
 import { useCountUp } from './hooks'
-import { EaseOutOptions } from './types'
+import { CountUpProps } from './types'
 
-interface MetricCounterProps {
+interface MetricCounterProps extends CountUpProps {
   unit: string
   description: string
-  start?: number
-  end: number
-  durationInMilliSec?: number
-  easeOutOption?: EaseOutOptions
-  precision?: number
 }
 
 const Wrapper = styled.p`
