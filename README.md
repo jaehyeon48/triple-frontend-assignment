@@ -7,6 +7,8 @@ npm i
 npm start
 ```
 
+포트 3000번에서 실행됩니다!
+
 ## 사용 기술 스택
 
 ### Babel과 Webpack
